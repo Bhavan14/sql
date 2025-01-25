@@ -1,0 +1,25 @@
+
+select User_ID,Subscription_Type,Country from netflixuserbase where Country like '%United States%';
+
+
+
+select Join_Date from netflixuserbase where Join_Date between '15-01-2022'and'01-05-2022';
+
+
+select min(Monthly_Revenue) from netflixuserbase;
+select max(Monthly_Revenue) from netflixuserbase;
+
+
+
+select * from netflixuserbase where Subscription_Type in('Basic');
+select * from netflixuserbase where Subscription_Type not in('Basic');
+
+
+
+
+select *,Monthly_Revenue,
+case
+when Monthly_Revenue between 10 and 12 then 'A'
+when Monthly_Revenue between 13 and 15 then 'B'
+end as Total_Revenue
+from netflixuserbase;
